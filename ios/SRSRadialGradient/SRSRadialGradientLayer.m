@@ -110,7 +110,7 @@
                                 _startCenterInitialized ? self.startCenter : defaultCenter,
                                 self.startRadius,
                                 _endCenterInitialized ? self.endCenter : defaultCenter,
-                                _endRadiusInitialized ? self.endRadius : MAX(size.width / 2, size.height / 2),
+                                _endRadiusInitialized ? self.endRadius : MAX(size.width, size.height),
                                 kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
 }
 

@@ -74,7 +74,7 @@ public class GradientView extends View {
             centerY = height/2;
         }
 		if(radius<= 0 ){
-            radius = Math.max(width,height)/2;
+            radius = Math.max(width,height);
         }
     }
 
