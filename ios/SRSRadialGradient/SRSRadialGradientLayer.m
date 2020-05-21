@@ -110,7 +110,7 @@
                                 _startCenterInitialized ? self.startCenter : defaultCenter,
                                 self.startRadius,
                                 _endCenterInitialized ? self.endCenter : defaultCenter,
-                                _endRadiusInitialized ? self.endRadius : MIN(size.width / 2, size.height / 2),
+                                _endRadiusInitialized ? self.endRadius : MAX(size.width / 2, size.height / 2),
                                 kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
 }
 
@@ -121,7 +121,7 @@
 
 - (void)display {
     [super display];
-    
+
     BOOL hasAlpha = NO;
 
     for (NSInteger i = 0; i < self.colors.count; i++) {
@@ -140,4 +140,3 @@
 }
 
 @end
-
