@@ -137,6 +137,7 @@
     self.contentsScale = image.scale;
 
     UIGraphicsEndImageContext();
+    (CGGradientRef)CFAutorelease(_lastGradient);
 }
 
 @end
