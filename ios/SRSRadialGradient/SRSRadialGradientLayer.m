@@ -18,6 +18,7 @@
         self.needsDisplayOnBoundsChange = YES;
         self.masksToBounds = YES;
         _needsNewGradient = YES;
+        _lastGradient = nil;
     }
 
     return self;
@@ -137,7 +138,10 @@
     self.contentsScale = image.scale;
 
     UIGraphicsEndImageContext();
-    (CGGradientRef)CFAutorelease(_lastGradient);
+    if(_lastGradient != nil){
+        (CGGradientRef)CFAutorelease(_lastGradient);
+        _lastGradient = nil;
+    }
 }
 
 @end
